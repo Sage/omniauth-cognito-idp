@@ -1,4 +1,4 @@
-require_relative 'lib/omnitauth-cognito-idp/version'
+require_relative 'lib/omniauth-cognito-idp/version'
 
 Gem::Specification.new do |s|
   s.name          = 'omniauth-cognito-idp'
