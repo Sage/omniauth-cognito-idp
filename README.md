@@ -1,5 +1,7 @@
 # omniauth-cognito-idp
 
+[![Build Status](https://travis-ci.org/Sage/omniauth-cognito-idp.svg?branch=master)](https://travis-ci.org/Sage/omniauth-cognito-idp)
+
 This is an [OmniAuth](https://github.com/omniauth/omniauth) strategy based on
 [omniauth-oauth2](https://github.com/omniauth/omniauth-oauth2) for authenticating against the
 [Amazon Cognito IdP](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-userpools-server-contract-reference.html).

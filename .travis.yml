@@ -1,0 +1,23 @@
+language: ruby
+rvm:
+  - 2.3.5
+cache: bundler
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - "./cc-test-reporter before-build"
+after_script:
+  - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+deploy:
+  provider: rubygems
+  api_key:
+    secure: Sqtjfnz6OAJTdle1INcjmZLvDdH8WST3NgsY5zdWmn/4UtGO++LtyWcEapcuqd/pBqFtqtonpsUirf0NENgj97yGnvyhFR2Mr/TKRsChLGOEUieJ1vglh2y8p7whnD/ozDESdqxRoMNS4dhRmWyu0N5oZaDx86tLpq+Dl+Yct+TRxXh9Ye79ZQjK+GR7GMl6+iyfJy2Q/kuflTn+yrOlNtHYOgiSD34BxRinDso0WmQCqnsWWdM4Ct1qGi6nZShX7PWEDRgg8R3LzntTBSK/YIJnZ+ZRbiRKFZWs3Joiobk+rBJRpadLi5DwIBONIKcFMWcEasd9xVXX1apMecRDfCsCOCgNUkTnVunMySEZ9fN/CWJp8j3WNquQjFmqEweFjP1ZBUpEu7cFtbdDLh8BLPNTnz0BYpdBCyH8qBp/qtl+oYzcSKLeLIXURhTOap445/8PRetCl9AFAqCyxs4Szu8u+Hr/feZIpc0JWkuWroMsQK3LCizo/VPthRJA/+N1R8+ba5bVI8MlLkl4YiP1veFLDe7F6+hBWY/Y+UOE5+OJJM+Un7pznjMC+KAZ20E1mtP0Wmplv7Cc2eQEQyiAoWo9QBAgP9A13KPxNrwsObZrat6NGjgsWP8NcTqWMsRogfkhPL+nDzXSFyrQUN/CeSvXDPNf/gF/nIS5aUmQEls=
+  gem: omniauth-cognito-idp
+  on:
+    tags: true
+    repo: Sage/omniauth-cognito-idp
+    condition: "$TRAVIS_RUBY_VERSION == 2.3.5"
+env:
+  global:
+    secure: eODfq2qrsufFzU7D81/OFyNHcXi7O2fsGBEgRHq/evUT8U0EVICOeAMWRqvHhOit6cuBc7kKYnhJzwMfK1e2saHhoPeJ9NuC7FSOyjw9ec8125SMa4MbBCM+HujPvwOCx7e9b9+dXBlJr31NuCc5On/qyS92rElwmep1H6jFEaoiX1+CLrn2/uQJqsic99F7WAkLfaTEw7xDs/v3wO21aWwf6BY92RvtB0oFv0Yr4ZWXYsTlCFvSTwzZGAFxZGCY4qaypsKLbyf5ZUVV2y5eDL8sEKBQj/h3WeOZmfIRJYJnSH8BlHAPlbNBS0Ei5rLYvnj/YyzJvdaSz3GBpaL4U9Oy2b/2D9pnTbX3A91VTQvO0LNQPWoILefsYSXauBwB8RiIkpv/4PhTaF8eNZAbOxobEV71XvSJF3kBRqAERZLJBAJha0jO3oRf+/wpjhXCOkVNh8dlnB/HSCc1swK1mN2IHC4Enk+uObM4knauwPnYSOJUcGUdPKVeglGkYJiqNpq3ihR0e6yobNlTI4CR0BPX1573h4s2W7IOPF+4m7Rw/KmTrzPVUwVMG1gBSWG4rzPXEihPgReNkREw/hqXR30vEA++BJZ2DxUY6PdSqlXdx3qMRAAOn7JtC3BghECqeKHpvnFq4m4syHYDexJPUoNJS4N+5e1R4qg1tFs1M+0=
