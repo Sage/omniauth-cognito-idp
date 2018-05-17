@@ -1,6 +1,9 @@
 # omniauth-cognito-idp
 
 [![Build Status](https://travis-ci.org/Sage/omniauth-cognito-idp.svg?branch=master)](https://travis-ci.org/Sage/omniauth-cognito-idp)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fc91c64f9d7b63724714/maintainability)](https://codeclimate.com/github/Sage/omniauth-cognito-idp/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/fc91c64f9d7b63724714/test_coverage)](https://codeclimate.com/github/Sage/omniauth-cognito-idp/test_coverage)
+[![Gem Version](https://badge.fury.io/rb/omniauth-cognito-idp.svg)](https://badge.fury.io/rb/omniauth-cognito-idp)
 
 This is an [OmniAuth](https://github.com/omniauth/omniauth) strategy based on
 [omniauth-oauth2](https://github.com/omniauth/omniauth-oauth2) for authenticating against the
