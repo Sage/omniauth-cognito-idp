@@ -4,7 +4,7 @@ SimpleCov.start do
   add_filter 'lib/omniauth-cognito-idp/version'
 end
 #
-require 'pry-byebug'
+require 'pry'
 require 'omniauth-cognito-idp'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
