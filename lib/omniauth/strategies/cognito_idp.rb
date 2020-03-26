@@ -79,7 +79,7 @@ module OmniAuth
       def parsed_id_token
         return nil unless id_token
 
-        @parsed_id_token ||= JWT.decode(
+        @parsed_id_token ||= ::JWT.decode(
           id_token,
           nil,
           false,
