@@ -47,7 +47,7 @@ class TestApp < Sinatra::Base
         <pre>#{session[:auth].pretty_inspect}</pre>
         <h2>Links</h2>
         <ul>
-          <li><a href="/auth/cognito-idp">Sign In</a></li>
+          <li><a href="/auth/cognito_idp">Sign In</a></li>
           <li><a href="/userinfo">Userinfo</a></li>
         </ul>
       </body>
