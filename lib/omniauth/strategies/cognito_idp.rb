@@ -22,7 +22,7 @@ module OmniAuth
   module Strategies
     # OmniAuth strategy that authenticates against an Amazon Cognito User Pool
     class CognitoIdP < OmniAuth::Strategies::OAuth2
-      option :name, 'cognito-idp'
+      option :name, 'cognito_idp'
       option :client_options,
         {
           authorize_url: '/oauth2/authorize',

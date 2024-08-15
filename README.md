@@ -75,5 +75,5 @@ following ENV variables set:
 * `COGNITO_POOL_SITE`: The domain attached to the user pool.
 
 The application will start at `http://localhost:8678`. You will have to add a callback URL
-`http://localhost:8678/auth/cognito-idp/callback` to the client application in the AWS Console. The test app stores the
+`http://localhost:8678/auth/cognito_idp/callback` to the client application in the AWS Console. The test app stores the
 tokens in memory, so you will need to sign in again after restarting the server.
